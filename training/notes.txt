@@ -1,0 +1,12 @@
+Today: 05/07/2025
+
+-> Objective: Make the welcome page.
+
+Taking the design into account, there are a few things that need fixing.
+    
+    1. We will built a welcome page. It will display the welcome message, the menu, contacts and
+    the current project i am working on. For simplicity we will display (lorem) text.
+
+    2. For the style we will have to figure out how to built the design in css. And using other tools online.
+
+    3. Get introduced to animations bu we will build this later.

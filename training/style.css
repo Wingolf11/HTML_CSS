@@ -9,12 +9,11 @@
 
 /* Body styles */
 body {
-  padding-top: 80px;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f9f9f9;
-  color: #333;
-  padding: 20px;
+  color: #9c8d8d;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -27,13 +26,41 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #222;
   color: white;
   z-index: 1000;
   padding: 20px 0;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-radius: 20px;
 }
+
+/* Hero Section (fullscreen intro) */
+.hero {
+  height: 100vh;
+  background: url('your-image.jpg') no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding: 2rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(75, 74, 74, 0.5); /* dark overlay for contrast */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  padding-top: 100px;
+}
+
 
 /* Navigation styles */
 nav ul {
@@ -42,16 +69,23 @@ nav ul {
   justify-content: center;
   gap: 20px;
   padding: 10px 0;
-  background-color: #222;
   border-radius: 8px;
 }
 
 nav ul li a {
+  display: flex;                /* or block, but flex helps center content */
+  justify-content: center;      /* center text horizontally */
+  align-items: center;          /* center text vertically */
+  width: 100px;
+  height: 70px;
+  background-color: #333;
+  border-radius: 10px;
   color: #eee;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 12px;
+  padding: 0;                  /* remove padding to avoid size issues */
   transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 nav ul li a:hover {
@@ -59,13 +93,10 @@ nav ul li a:hover {
   border-radius: 4px;
 }
 
+
 /* Section styles */
 section {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
   background: white;
-  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
